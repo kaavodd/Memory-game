@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory-game</title>
+    <link href="./app/assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <div id="regle_jeu" class="regle_jeu">
+        <p>
+            <br><h1><strong> Règle du jeu</h1>
+            <p>Le but du jeu est de regrouper par paire les cartes disposées face cachée sur le plateau.</p>
+            <p>Il y a 3 modes de jeu:</p>    
+            <p>Facile: sur le thème de Harry Potter ! 8 paires à trouver. "Accio paria !"</p>    
+            <p>Moyen: sur le thème de Star Wars ! 12 paires à trouver possibilité de jouer contre le chrono et point négatif si tu te trompes ! "que la force soit avec toi ! "</p>
+            <p>Difficile: Là il va te falloir des super pouvoirs! Sur le thème des Super héros. 16 paires à trouver, un chrono à battre, des points en moins si tu te trompes et les cartes restent visibles moins longtemps !</p>
+            <p>Choisis le thème avec lequel tu veux jouer et lance toi!</p>
+            <h2 class="texte">Bonne chance !</h2></strong>
+        </p>  
+        <ul class="new-game" onclick="popup()">
+        
+            <li><a href="#overlay" data-hover="Nouvelle Partie">Nouvelle Partie</a></li>
+        </ul>       
+    </div>
+    <div id="overlay" class="overlay">
+        <div class="popup">
+            <h2>
+                Choisissez votre niveau
+                <span id="buttonClose" class="buttonClose">&times;</span>
+            </h2>
+            <div class="content-level" id="choice">
+                <button  class="level-btn" onclick="choiceLevel(this)">Easy</button><br>
+                <button class="level-btn" onclick="choiceLevel(this)">Medium</button><br>
+                <button class="level-btn" onclick="choiceLevel(this)">Hard</button> 
+            </div>  
+        </div>
+    </div>
+    <div id="level" class="level">
+        <div class="popup">
+            <h2>
+                Choisissez votre deck
+                <span id="retour_arriere" class="buttonClose">&times;</span>
+            </h2>
+            <div id="HP" class="HP">
+                <a href=""><img class="Picture" src="./app/pictures/deck/death_eaters.jpg"></a>
+                <a href=""><img class="Picture" src="./app/pictures/deck/wizard.jpg"></a>
+            </div>
+            <div id="SW" class="SW">
+                <a href=""><img class="Picture" src="./app/pictures/deck/Light_side.jpg"></a>
+                <a href=""><img class="Picture" src="./app/pictures/deck/Dark_side.jpg"></a>
+
+            </div>
+            <div id="CM" class="CM">
+                <a href=""><img class="Picture" src="./app/pictures/deck/DC.jpg"></a>
+                <a href=""><img class="Picture" src="./app/pictures/deck/Marvel.jpg"></a>
+            </div>
+        </div>
+    </div>
+    <script src="./app/assets/js/script.js"></script>
+</body>
+</html>
